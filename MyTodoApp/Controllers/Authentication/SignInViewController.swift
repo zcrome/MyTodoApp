@@ -15,6 +15,8 @@ class SignInViewController: UIViewController {
 	@IBOutlet weak var usernameTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var signInButton: UIButton!
+	@IBOutlet weak var signupButton: UIButton!
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +24,23 @@ class SignInViewController: UIViewController {
     }
 
 	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		usernameTextField.resignFirstResponder()
+		passwordTextField.resignFirstResponder()
+	}
+	
+	
 	
 	
 	@IBAction func signInAction(_ sender: UIButton) {
 		performSegue(withIdentifier: "goToHome", sender: nil)
+		
 	}
 	
+	
+	
+	@IBAction func signUpAction(_ sender: Any) {
+	}
 	
 	
 
