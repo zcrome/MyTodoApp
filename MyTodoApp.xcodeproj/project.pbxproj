@@ -13,6 +13,11 @@
 		F4C1091B20E8171200623095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C1091920E8171200623095 /* LaunchScreen.storyboard */; };
 		F4C1092820E81AC900623095 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1092720E81AC900623095 /* SignInViewController.swift */; };
 		F4C1092A20E8299600623095 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C1092920E8299600623095 /* Home.storyboard */; };
+		F4D6B8392103D8DE003E8478 /* ToDos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D6B8382103D8DE003E8478 /* ToDos.storyboard */; };
+		F4D6B83B2103D962003E8478 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D6B83A2103D962003E8478 /* Notes.storyboard */; };
+		F4D6B83F2103DBC9003E8478 /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B83E2103DBC9003E8478 /* TodoDetailViewController.swift */; };
+		F4D6B8412103DC01003E8478 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B8402103DC01003E8478 /* NotesViewController.swift */; };
+		F4D6B8432103DC15003E8478 /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B8422103DC15003E8478 /* NotesDetailViewController.swift */; };
 		F4E18AD320F155A400EFBC0C /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E18AD220F155A400EFBC0C /* Authentication.storyboard */; };
 		F4E18AD520F15C4400EFBC0C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E18AD420F15C4400EFBC0C /* SignUpViewController.swift */; };
 		F4E18AD920F1634300EFBC0C /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E18AD820F1634300EFBC0C /* TodosViewController.swift */; };
@@ -31,6 +36,11 @@
 		F4C1091C20E8171200623095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4C1092720E81AC900623095 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F4C1092920E8299600623095 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F4D6B8382103D8DE003E8478 /* ToDos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToDos.storyboard; sourceTree = "<group>"; };
+		F4D6B83A2103D962003E8478 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		F4D6B83E2103DBC9003E8478 /* TodoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewController.swift; sourceTree = "<group>"; };
+		F4D6B8402103DC01003E8478 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		F4D6B8422103DC15003E8478 /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
 		F4E18AD220F155A400EFBC0C /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		F4E18AD420F15C4400EFBC0C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F4E18AD820F1634300EFBC0C /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +99,8 @@
 			children = (
 				F4C1092920E8299600623095 /* Home.storyboard */,
 				F4E18AD220F155A400EFBC0C /* Authentication.storyboard */,
+				F4D6B8382103D8DE003E8478 /* ToDos.storyboard */,
+				F4D6B83A2103D962003E8478 /* Notes.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -96,6 +108,8 @@
 		F4C1092320E8197500623095 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4D6B83D2103DB7D003E8478 /* Notes */,
+				F4D6B83C2103DA8E003E8478 /* ToDos */,
 				F4E18AD720F1632200EFBC0C /* Home */,
 				F4E18AD620F162FB00EFBC0C /* Authentication */,
 			);
@@ -126,6 +140,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F4D6B83C2103DA8E003E8478 /* ToDos */ = {
+			isa = PBXGroup;
+			children = (
+				F4E18AD820F1634300EFBC0C /* TodosViewController.swift */,
+				F4D6B83E2103DBC9003E8478 /* TodoDetailViewController.swift */,
+			);
+			path = ToDos;
+			sourceTree = "<group>";
+		};
+		F4D6B83D2103DB7D003E8478 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				F4D6B8402103DC01003E8478 /* NotesViewController.swift */,
+				F4D6B8422103DC15003E8478 /* NotesDetailViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		F4E18AD620F162FB00EFBC0C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +170,6 @@
 		F4E18AD720F1632200EFBC0C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F4E18AD820F1634300EFBC0C /* TodosViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -212,9 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E18AD320F155A400EFBC0C /* Authentication.storyboard in Resources */,
+				F4D6B83B2103D962003E8478 /* Notes.storyboard in Resources */,
 				F4C1091B20E8171200623095 /* LaunchScreen.storyboard in Resources */,
 				F4C1091820E8171200623095 /* Assets.xcassets in Resources */,
 				F4E18AE220F1677400EFBC0C /* TodosTableViewCell.xib in Resources */,
+				F4D6B8392103D8DE003E8478 /* ToDos.storyboard in Resources */,
 				F4C1092A20E8299600623095 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,12 +261,15 @@
 			files = (
 				F4C1091620E8171200623095 /* MyTodoApp.xcdatamodeld in Sources */,
 				F4E18ADB20F1654A00EFBC0C /* Todo.swift in Sources */,
+				F4D6B8432103DC15003E8478 /* NotesDetailViewController.swift in Sources */,
 				F4C1090E20E8171200623095 /* AppDelegate.swift in Sources */,
 				F4E18AD520F15C4400EFBC0C /* SignUpViewController.swift in Sources */,
 				F4E18AD920F1634300EFBC0C /* TodosViewController.swift in Sources */,
 				F4E18ADD20F165C300EFBC0C /* Task.swift in Sources */,
+				F4D6B8412103DC01003E8478 /* NotesViewController.swift in Sources */,
 				F4C1092820E81AC900623095 /* SignInViewController.swift in Sources */,
 				F4E18AE120F1677400EFBC0C /* TodosTableViewCell.swift in Sources */,
+				F4D6B83F2103DBC9003E8478 /* TodoDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

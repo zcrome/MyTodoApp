@@ -93,20 +93,11 @@
                         <outlet property="signupButton" destination="3ZO-aB-aaj" id="Rlb-QM-7th"/>
                         <outlet property="titleLabel" destination="Reb-Tg-0U5" id="RvT-f9-mWB"/>
                         <outlet property="usernameTextField" destination="vRQ-Ek-JUk" id="BKH-X0-Ydh"/>
-                        <segue destination="C45-kg-tcn" kind="show" identifier="goToHome" id="XWl-mX-clR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rci-NO-jU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-135" y="123"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="lKv-7r-Yn1">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="C45-kg-tcn" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gjh-Bu-1Sd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="398" y="-260"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="H0a-NE-2Hh">
