@@ -41,5 +41,26 @@ class TodoEndPoint{
   }
   
   
+  static func createTodo(withTodo todo: Todo, completionHandler: @escaping(_ idTodo: String?, _ error: String?)->Void){
+    let url = "\(TodoAPI.baseURL)\(TodoAPI.myTodosURL)"
+    let params = ["title": todo.title,
+                  "description": todo.description,
+                  "dateCreated": Date().description,
+                  "dateUpdated": Date().description,
+                  "isDeleted": true,
+                  "toDoUserId": "0"] as [String : Any]
+    Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
+      switch(response.result){
+      case .success:
+        let data = JSON(response.data!)
+        completionHandler(data.dictionary!["id"]?.stringValue, nil)
+      case .failure(let error):
+        print(error)
+        completionHandler(nil,error.localizedDescription)
+      }
+    }
+  }
+  
+  
   
 }
