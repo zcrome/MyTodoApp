@@ -12,7 +12,7 @@
 		91A45AA42118F2DF005FC7C8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A45A792118F298005FC7C8 /* Alamofire.framework */; };
 		91A45AA52118F2DF005FC7C8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A45A792118F298005FC7C8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91A45AAA2118F4AD005FC7C8 /* TodoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A45AA92118F4AD005FC7C8 /* TodoAPI.swift */; };
-		91A45AAD2118F5B9005FC7C8 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A45AAC2118F5B9005FC7C8 /* Endpoints.swift */; };
+		91A45AAD2118F5B9005FC7C8 /* TodoEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A45AAC2118F5B9005FC7C8 /* TodoEndPoint.swift */; };
 		91A45AB02118F946005FC7C8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A45AAF2118F946005FC7C8 /* AboutViewController.swift */; };
 		F4C1090E20E8171200623095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1090D20E8171200623095 /* AppDelegate.swift */; };
 		F4C1091620E8171200623095 /* MyTodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4C1091420E8171200623095 /* MyTodoApp.xcdatamodeld */; };
@@ -168,7 +168,7 @@
 		91A45A6D2118F298005FC7C8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		91A45A862118F2CD005FC7C8 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		91A45AA92118F4AD005FC7C8 /* TodoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAPI.swift; sourceTree = "<group>"; };
-		91A45AAC2118F5B9005FC7C8 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		91A45AAC2118F5B9005FC7C8 /* TodoEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEndPoint.swift; sourceTree = "<group>"; };
 		91A45AAF2118F946005FC7C8 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F4C1090A20E8171200623095 /* MyTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C1090D20E8171200623095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				91A45AA92118F4AD005FC7C8 /* TodoAPI.swift */,
-				91A45AAC2118F5B9005FC7C8 /* Endpoints.swift */,
+				91A45AAC2118F5B9005FC7C8 /* TodoEndPoint.swift */,
 			);
 			path = v1.0;
 			sourceTree = "<group>";
@@ -280,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				91A45AA82118F48B005FC7C8 /* Network */,
-				F4C1092620E8199700623095 /* Utils */,
 				F4C1092520E8199000623095 /* Models */,
 				F4C1092420E8198200623095 /* Views */,
 				F4C1092320E8197500623095 /* Controllers */,
@@ -331,13 +330,6 @@
 				F4E18ADC20F165C300EFBC0C /* Task.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F4C1092620E8199700623095 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		F4D6B83C2103DA8E003E8478 /* ToDos */ = {
@@ -568,7 +560,7 @@
 			files = (
 				91A45AAA2118F4AD005FC7C8 /* TodoAPI.swift in Sources */,
 				F4C1091620E8171200623095 /* MyTodoApp.xcdatamodeld in Sources */,
-				91A45AAD2118F5B9005FC7C8 /* Endpoints.swift in Sources */,
+				91A45AAD2118F5B9005FC7C8 /* TodoEndPoint.swift in Sources */,
 				F4E18ADB20F1654A00EFBC0C /* Todo.swift in Sources */,
 				F4D6B8432103DC15003E8478 /* NotesDetailViewController.swift in Sources */,
 				F4C1090E20E8171200623095 /* AppDelegate.swift in Sources */,

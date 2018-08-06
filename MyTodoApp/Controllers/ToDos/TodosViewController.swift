@@ -27,7 +27,7 @@ class TodosViewController: UIViewController {
   }
   
   func getData(){
-    Endpoints.getTodos { (todos, error) in
+    TodoEndPoint.getTodos { (todos, error) in
       guard error == nil, let todos = todos  else{
         print(error!)
         return
@@ -36,7 +36,6 @@ class TodosViewController: UIViewController {
         self.todos = todos
         self.todoTableView.reloadData()
       }
-      
     }
   }
   

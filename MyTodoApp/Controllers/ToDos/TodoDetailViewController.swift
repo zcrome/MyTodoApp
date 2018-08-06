@@ -30,7 +30,7 @@ class TodoDetailViewController: UIViewController {
     if !isExisted {
       todoActionButton.setTitle("Create", for: .normal)
     }else{
-      todoActionButton.setTitle("save Changes", for: .normal)
+      todoActionButton.setTitle("Save Changes", for: .normal)
       todoActionButton.addTarget(self, action: #selector(saveTodoChanges), for: .touchUpInside)
     }
   }
@@ -45,13 +45,22 @@ class TodoDetailViewController: UIViewController {
   }
   
   func saveTodoChangeWith(todo: Todo){
-    let params = ["title": todo.title, "description": todo.description]
-    let url = String(format: "\(TodoAPI.baseURL)\(TodoAPI.editMyTodoUrl)", "\(todo.id)")
-    Alamofire.request(url, method: .put, parameters: params).responseJSON{ response in
-      self.navigationController?.popViewController(animated: true)
-      
+
+    TodoEndPoint.editTodo(withUpdatedTodo: todo) { (todoId, error) in
+      if let error = error{
+        print(error)
+        return
+      }
+      if let _ = todoId{
+        DispatchQueue.main.async {
+          self.navigationController?.popViewController(animated: true)
+        }
+      }
     }
     
   }
   
 }
+
+
+

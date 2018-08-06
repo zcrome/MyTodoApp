@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="ToDos" id="C5W-3d-RyN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UTj-UZ-IpU">
                             <connections>
-                                <segue destination="8Vl-Zz-Gwf" kind="show" id="Llx-F7-qG5"/>
+                                <segue destination="8Vl-Zz-Gwf" kind="show" identifier="todoDetail" id="Llx-F7-qG5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -54,7 +54,7 @@
         <!--Todo Detail View Controller-->
         <scene sceneID="IUP-jx-COX">
             <objects>
-                <viewController id="8Vl-Zz-Gwf" customClass="TodoDetailViewController" customModule="MyTodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoDetailVC" id="8Vl-Zz-Gwf" customClass="TodoDetailViewController" customModule="MyTodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gtn-Ql-Gqw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
