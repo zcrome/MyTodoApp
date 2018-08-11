@@ -15,5 +15,8 @@ class TodoAPI{
   static let baseURL = "http://localhost:3000/"
   static let myTodosURL = "api/ToDos"
   static let modifyMyTodoUrl = "api/ToDos/%@"
-  
+	
+	static let todoTasksUrl = "api/ToDos/%@/tasks"
+	static let myTasksUrl = "api/Tasks"
+	
 }
