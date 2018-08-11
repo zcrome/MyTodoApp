@@ -15,16 +15,38 @@ class TodosViewController: UIViewController {
   @IBOutlet weak var todoTableView: UITableView!
   
   var todos: [Todo] = []
+	lazy var refreshControl: UIRefreshControl = {
+		let refreshControl = UIRefreshControl()
+		refreshControl.addTarget(self, action:
+			#selector(TodosViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+		refreshControl.tintColor = .blue
+		return refreshControl
+	}()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     todoTableView.register(UINib(nibName: "TodosTableViewCell", bundle: nil), forCellReuseIdentifier: "todoCell")
+		self.todoTableView.addSubview(self.refreshControl)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     getData()
   }
+	
+	@objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+		TodoEndPoint.getTodos { (todos, error) in
+			guard error == nil, let todos = todos  else{
+				print(error!)
+				return
+			}
+			DispatchQueue.main.async {
+				self.todos = todos
+				self.todoTableView.reloadData()
+				self.refreshControl.endRefreshing()
+			}
+		}
+	}
   
   func getData(){
     TodoEndPoint.getTodos { (todos, error) in
@@ -55,6 +77,25 @@ extension TodosViewController: UITableViewDelegate {
     let todo = todos[indexPath.row]
     performSegue(withIdentifier: "todoDetail", sender: todo)
   }
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			
+			let todoDeleted = self.todos.remove(at: indexPath.row)
+			self.todoTableView.deleteRows(at: [indexPath], with: .automatic)
+			TodoEndPoint.delete(Todo: todoDeleted, completionHandler: { (itemsDeleted, error) in
+				if let error = error{
+					print(error)
+				}
+				print("ITEMS DELETED: \(String(describing: itemsDeleted))")
+			})
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return true
+	}
+	
 }
 
 extension TodosViewController: UITableViewDataSource{

@@ -26,7 +26,7 @@ class TodoEndPoint{
   }
   
   static func editTodo(withUpdatedTodo updatedTodo: Todo, completionHandler: @escaping(_ idTodo: String?, _ error: String?)->Void){
-    let url = String(format: "\(TodoAPI.baseURL)\(TodoAPI.editMyTodoUrl)", "\(updatedTodo.id)")
+    let url = String(format: "\(TodoAPI.baseURL)\(TodoAPI.modifyMyTodoUrl)", "\(updatedTodo.id)")
     let params = ["title": updatedTodo.title, "description": updatedTodo.description]
     Alamofire.request(url, method: .put, parameters: params).responseJSON { response in
       switch(response.result){
@@ -60,7 +60,22 @@ class TodoEndPoint{
       }
     }
   }
-  
+	
+	
+	static func delete(Todo todo: Todo, completionHandler: @escaping(_ idTodo: Int?, _ error: String?)->Void){
+		let url = String(format: "\(TodoAPI.baseURL)\(TodoAPI.modifyMyTodoUrl)", "\(todo.id)")
+		let params = ["id": todo.id]
+		Alamofire.request(url, method: .delete, parameters: params).responseJSON { response in
+			switch(response.result){
+			case .success:
+				let data = JSON(response.data!)
+				completionHandler(data.dictionary!["count"]?.intValue, nil)
+			case .failure(let error):
+				print(error)
+				completionHandler(nil,error.localizedDescription)
+			}
+		}
+	}
   
   
 }
